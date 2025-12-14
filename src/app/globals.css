@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* 🌞 Light mode variables */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --main-color: #f9624e;
+  --bg-color: #fdfdfd;
+  --white-color: #fdfdfd;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+
+  /* Optional font variables */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* 🌚 Dark mode override */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --bg-color: #0b061f;
+    --white-color: #fdfdfd;
+    /* main-color and shadow-color can remain the same unless you want to change them in dark mode */
+  }
+}
+
+/* Apply background and text */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom animation */
+@keyframes professionRotate {
+  0%, 20% {
+    transform: rotate(0deg);
+  }
+  25%, 45% {
+    transform: rotate(-90deg);
+  }
+  50%, 70% {
+    transform: rotate(-180deg);
+  }
+  75%, 95% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-profession {
+  animation: professionRotate 13s ease-out infinite;
+}
+
+
+.btn {
+  background: var(--main-color);
+  color: var(--white-color);
+  box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
+}
+
+.custom-box {
+  background-color: var(--bg-color);
+  color: var(--foreground);
+}
+
+.clip-diagonal {
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
