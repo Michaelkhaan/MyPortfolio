@@ -38,7 +38,7 @@ const Hero = () => {
         {/* Social icons */}
         <div className="flex space-x-4 mt-6">
           <a
-            href="#"
+            href="https://www.instagram.com/michaelkhan77/"
             className="group border-2 border-primary w-10 h-10 rounded-full
              flex items-center justify-center
              text-[#F9624E] hover:bg-[#F9624E] hover:text-white
@@ -48,7 +48,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="#"
+            href="https://www.facebook.com/micheal.khan.108889"
             className="group border-2 border-primary w-10 h-10 rounded-full
              flex items-center justify-center
              text-[#F9624E]
@@ -58,7 +58,7 @@ const Hero = () => {
             <Facebook />
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/michael-khan-b2410022a/"
             className="group border-2 border-primary w-10 h-10 rounded-full
              flex items-center justify-center
              text-[#F9624E] hover:bg-[#F9624E] hover:text-white
