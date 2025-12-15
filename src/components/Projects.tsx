@@ -24,34 +24,52 @@ const Portfolio = () => {
         Latest <span className="text-[#F9624E]">Projects</span>
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4 lg:px-20">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="relative rounded-2xl overflow-hidden shadow-md group"
-          >
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={0}
-              height={0}
-              unoptimized
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-[#F9624E] text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center items-center text-center p-8">
-              <h4 className="text-lg font-bold mb-1">{project.title}</h4>
-              <p className="text-xs mb-2">
-                {project.description}
-              </p>
-              <a
-                href={project.link}
-                className="w-12 h-12 flex items-center justify-center bg-white text-black rounded-full"
-              >
-                <FiExternalLink size={20} />
-              </a>
-            </div>
-          </div>
-        ))}
+  <div
+    key={index}
+    onClick={() => {
+      if (window.innerWidth < 768) {
+        window.open(project.link, "_blank");
+      }
+    }}
+    className="
+      relative rounded-2xl overflow-hidden shadow-md group
+      cursor-pointer md:cursor-default
+    "
+  >
+    <Image
+      src={project.image}
+      alt={project.title}
+      width={0}
+      height={0}
+      unoptimized
+      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+
+    {/* Hover overlay (desktop only) */}
+    <div
+      className="
+        absolute inset-0 bg-gradient-to-b from-black/10 to-[#F9624E]
+        text-white opacity-0 group-hover:opacity-100
+        transition-opacity duration-500
+        hidden md:flex
+        flex-col justify-center items-center text-center p-8
+      "
+    >
+      <h4 className="text-lg font-bold mb-1">{project.title}</h4>
+      <p className="text-xs mb-2">{project.description}</p>
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-12 h-12 flex items-center justify-center bg-white text-black rounded-full"
+      >
+        <FiExternalLink size={20} />
+      </a>
+    </div>
+  </div>
+))}
       </div>
     </section>
   );
