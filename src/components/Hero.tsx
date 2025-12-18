@@ -8,7 +8,7 @@ import {
   BsCodeSlash,
   BsPalette,
 } from "react-icons/bs";
-import { Facebook, Instagram, Linkedin } from "./Icons";
+import { Facebook, GitHub, Instagram, Linkedin } from "./Icons";
 
 const Hero = () => {
   const downloadCV = () => {
@@ -66,6 +66,16 @@ const Hero = () => {
           >
             <Linkedin />
           </a>
+
+          <a
+            href="https://github.com/Michaelkhaan"
+            className="border-2 border-primary w-10 h-10 rounded-full
+            flex items-center justify-center
+            text-[#F9624E] hover:bg-[#F9624E] hover:text-white
+            transition"
+          >
+            <GitHub />
+          </a>
         </div>
 
         {/* Button */}
@@ -115,7 +125,7 @@ const Hero = () => {
       {/* Hero image */}
       <div className="z-10">
         <Image
-          src="/heroimage.png"
+          src="/heroimage (2).png"
           alt="Hero Image"
           width={500}
           height={600}
