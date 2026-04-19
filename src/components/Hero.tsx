@@ -13,8 +13,8 @@ import { Facebook, GitHub, Instagram, Linkedin } from "./Icons";
 const Hero = () => {
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/MyCv.pdf";
-    link.download = "MyCv.pdf";
+    link.href = "/MyCV2.pdf";
+    link.download = "MyCV2.pdf";
     link.click();
   };
 
