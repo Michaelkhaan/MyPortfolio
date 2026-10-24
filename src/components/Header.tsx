@@ -20,7 +20,7 @@ export default function Header() {
       <div className={`container-shell flex items-center justify-between rounded-2xl border px-4 py-3 backdrop-blur-xl transition-all ${scrolled ? "border-black/10 bg-white/90 shadow-lg" : "border-black/5 bg-white/70"}`}>
         <a href="#home" className="flex items-center gap-2 font-black tracking-tight text-[#121826]">
           <span className="grid h-8 w-8 place-items-center rounded-xl bg-[#ff674f] text-sm text-white">M</span>
-          <span>Mekaiel<span className="text-[#ff674f]">.</span></span>
+          <span><span className="text-[#ff674f] text-lg">M</span>ekaiel <span className="text-[#ff674f] text-lg">K</span>han<span className="text-[#ff674f]">.</span></span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex">
