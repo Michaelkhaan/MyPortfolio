@@ -1,26 +1,10 @@
-import React from "react";
-import { ArrowUp } from "lucide-react"; // You can replace with `bx` icon if needed
+import { ArrowUpRight, ArrowUp } from "lucide-react";
 
-const Footer = () => {
-  return (
-    <footer className="flex justify-between items-center flex-wrap px-[7%] py-8 bg-[#F9624E]">
-      {/* Left text */}
-      <div className="text-white text-base md:text-lg">
-        <p>Copyright &copy; All Rights Reserved.</p>
-      </div>
-
-      {/* Scroll to top icon */}
-      <div className="footer-iconTop">
-        <a
-          href="#home"
-          className="inline-flex justify-center items-center p-2 rounded-lg bg-white border-2 border-[#F9624E] outline outline-transparent transition-all hover:outline-white"
-        >
-          {/* Replace with bx icon if needed */}
-          <ArrowUp className="text-[#333] w-6 h-6" />
-        </a>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+export default function Footer() {
+  return <footer className="bg-[#121826] px-4 pb-8 text-white">
+    <div className="container-shell flex flex-col gap-5 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+      <p className="text-xs text-white/40">© {new Date().getFullYear()} Mekaiel Khan. All rights reserved.</p>
+      <div className="flex items-center gap-4"><a href="#contact" className="inline-flex items-center gap-1 text-xs font-bold text-white/70 hover:text-[#ff674f]">Start a project <ArrowUpRight size={14}/></a><a href="#home" aria-label="Back to top" className="grid h-9 w-9 place-items-center rounded-full border border-white/10 hover:border-[#ff674f] hover:text-[#ff674f]"><ArrowUp size={15}/></a></div>
+    </div>
+  </footer>;
+}

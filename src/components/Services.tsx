@@ -1,64 +1,25 @@
-"use client";
-import React from "react";
-import {
-  BiCodeAlt,
-  // BiBarChartAlt,
-  // BiPaint,
-} from "react-icons/bi";
-import { Portfolio, Shopping } from "./Icons";
+import { ArrowUpRight, Code2, ShoppingBag, LayoutTemplate } from "lucide-react";
 
 const services = [
-  {
-    icon: <BiCodeAlt className="text-7xl text-[#F9624E]" />,
-    title: "Web Development",
-    description:
-      "I build fast, responsive, and user-friendly websites using modern technologies to ensure a seamless experience across all devices.",
-  },
-  {
-    icon: <Shopping />,
-    title: "E-commerce Frontend",
-    description:
-      "I create responsive and user-friendly e-commerce interfaces that offer seamless browsing, smooth shopping, and hassle-free checkout experiences.",
-  },
-  {
-    icon: <Portfolio />,
-    title: "Portfolio or Blog",
-    description:
-      "I design and develop modern, responsive portfolio and blog websites that showcase content beautifully, load fast, and offer a smooth, user-friendly experience.",
-  },
+  { n:"01", icon:<Code2 size={22}/>, title:"Web Development", text:"Fast, responsive websites and web apps built around clean structure, performance and a polished user experience." },
+  { n:"02", icon:<ShoppingBag size={22}/>, title:"E-commerce Frontend", text:"Modern storefront interfaces that make products easy to discover, compare and buy across every screen." },
+  { n:"03", icon:<LayoutTemplate size={22}/>, title:"Portfolio & Landing Pages", text:"Focused personal brands, campaign pages and portfolios designed to communicate clearly and convert visitors." },
 ];
 
-const Services = () => {
-  return (
-    <section id="services" className="py-24 bg-white dark:bg-[#0b061f]">
-      <h2 className="text-center text-4xl font-bold mb-20 text-[#0b061f] dark:text-white">
-        My <span className="text-[#F9624E]">Services</span>
-      </h2>
-
-      <div className="flex flex-wrap justify-center items-center gap-8 px-20">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="flex-1 min-w-[300px] max-w-sm bg-white dark:bg-[#141126] text-center rounded-2xl px-6 py-10 shadow-md border-t-[6px] border-b-[6px] border-[#F9624E] transition duration-500 ease-in-out hover:scale-[1.02] hover:shadow-2xl"
-          >
-            {service.icon}
-            <h3 className="text-2xl font-semibold mt-4 mb-3 hover:text-[#F9624E] transition-colors">
-              {service.title}
-            </h3>
-            <p className="text-base text-gray-600 dark:text-gray-300 mb-6">
-              {service.description}
-            </p>
-            <a
-              href="#"
-              className="inline-block px-5 py-2 bg-[#F9624E] text-white rounded-md hover:bg-[#f9624ea1] transition"
-            >
-              Read More
-            </a>
-          </div>
-        ))}
+export default function Services() {
+  return <section id="services" className="section-space bg-[#f6f4ef]">
+    <div className="container-shell">
+      <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+        <div><span className="eyebrow">What I do</span><h2 className="mt-4 text-4xl font-black tracking-[-.04em] sm:text-5xl">Built for <span className="text-[#ff674f]">real users.</span></h2></div>
+        <p className="max-w-md text-sm leading-6 text-[#687082]">From marketing sites to complete frontend experiences, I care about the details people notice and the performance they don&apos;t.</p>
       </div>
-    </section>
-  );
-};
-
-export default Services;
+      <div className="mt-10 grid gap-4 md:grid-cols-3">
+        {services.map((s)=><article key={s.n} className="group rounded-[24px] border border-black/10 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <div className="flex items-center justify-between"><span className="text-xs font-black text-[#ff674f]">{s.n}</span><div className="grid h-10 w-10 place-items-center rounded-xl bg-[#ffe4dd] text-[#ff674f]">{s.icon}</div></div>
+          <h3 className="mt-14 text-xl font-black tracking-tight">{s.title}</h3><p className="mt-3 text-sm leading-6 text-[#687082]">{s.text}</p>
+          <a href="#contact" className="mt-6 inline-flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[#121826] group-hover:text-[#ff674f]">Start a project <ArrowUpRight size={14}/></a>
+        </article>)}
+      </div>
+    </div>
+  </section>;
+}
