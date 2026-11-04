@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio"
   },
   "dependencies": {
     "autoprefixer": "^10.4.21",
@@ -20,7 +23,9 @@
     "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",
     "scrollreveal": "^4.0.9",
-    "swiper": "^11.2.10"
+    "swiper": "^11.2.10",
+    "@prisma/client": "^6.19.0",
+    "prisma": "^6.19.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
