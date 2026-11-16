@@ -84,13 +84,13 @@ export default function Hero() {
           <div className="relative overflow-hidden rounded-[34px] border border-black/10 bg-[#121826] p-3 soft-shadow">
             <div className="relative aspect-[4/4.6] overflow-hidden rounded-[26px] bg-[#e9e6df]">
               <Image
-  src="/myimage.png"
-  alt="Mekaiel Khan"
-  fill
-  priority
-  className="object-cover object-center scale-x-[-1]"
-  sizes="(max-width: 768px) 90vw, 430px"
-/>
+                src="/myimage.png"
+                alt="Mekaiel Khan"
+                fill
+                priority
+                className="object-cover object-center scale-x-[-1]"
+                sizes="(max-width: 768px) 90vw, 430px"
+              />
               <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/20 bg-[#121826]/85 p-4 text-white backdrop-blur-md">
                 <div className="flex items-center justify-between">
                   <div>
